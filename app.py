@@ -6,4 +6,4 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     # return "<p>Hello, World!</p>"
-    return render_template("app.html", name = "Devang")
+    return render_template("app.html", name = api_keys["client_id"])
