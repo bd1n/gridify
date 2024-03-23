@@ -1,7 +1,7 @@
-
+import '../Styles/square.css';
 const Grid = () => {
     return (
-        <div className="square" style={{marginTop:"auto"}}>
+        <div className="styles.square">
             square
         </div>
     )
