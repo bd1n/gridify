@@ -3,12 +3,17 @@ import './App.css';
 import Header from './Components/Header';
 import * as auth from './backend/auth';
 import { useEffect, useState } from 'react';
+import { getEnum, setEnum, setOrder, getOrder } from "./CategoryEnum"
 
 
 function App() {
   const [token, setToken] = useState(null);
-  const [search, setSearch] = useState(null);
+  const [id, setId] = useState(null);
   useEffect( () => {
+    setEnum();
+    setOrder();
+    console.log("ORDER IS ", getOrder());
+
     auth.getAuth()
     .then((response) => {
       setToken(response);
@@ -18,25 +23,28 @@ function App() {
     //   // setSearch(search);
     // });
     auth.getSearch("Drake")
-    .then((search) => {
-      if (!search) {
+    .then((a_id) => {
+      if (!a_id) {
         // THIS IS AN ERROR
         console.log("APP SIDE no artist")
       }
       else{
         // FILL SQUARE
-        console.log("APP SIDE", search)
+        console.log("APP SIDE", a_id)
+        setId(a_id);
       }
     });
+
+    console.log("enum is", getEnum());
   }, []);
 
-  if (!token && !search) return null;
+  if (!token || !id) return null;
 
   return (
     <div className="App">
       <Header/>
-      <h1>{token}</h1>
-      {/* <h1>{search}</h1> */}
+      <h1>token: {token}</h1>
+      <h1>id: {id}</h1>
     </div>
   );
 }

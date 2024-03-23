@@ -52,7 +52,7 @@ export const getAudioFeatures_Track = async (track_id) => {
   }  
 };
 
-export const getSearch = async (artist) => {
+export const getSearch = async (artist, first_param, second_param) => {
   //request token using getAuth() function
   const access_token = await getAuth();
 
@@ -68,12 +68,14 @@ export const getSearch = async (artist) => {
     
     console.log("auth side", response.data.artists.items[0].name);
 
-    if(!response.data.artists.items[0] || response.data.artists.items[0].name != artist) {
+    if(!response.data.artists.items[0] || response.data.artists.items[0].name !== artist) {
       console.log("auth side no artist");
       return;
     }
     else {
       const artist_id = response.data.artists.items[0].id; 
+      artist = await getArtist(artist_id);
+      console.log("got artist:", artist)
       return artist_id;
     }
   }catch(error){
@@ -94,7 +96,7 @@ export const getArtist = async (artist_id) => {
         'Authorization': `Bearer ${access_token}`
       }
     });
-    console.log(response.data);
+    // console.log("GET ARTIST", response.data);
     return response.data;
   }catch(error){
     console.log(error);
