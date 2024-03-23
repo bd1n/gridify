@@ -1,3 +1,14 @@
 .square{
-    background-color: black;
+    background-color: lightgray;
+    width: 18vh;
+    height: 18vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #001515; 
+}
+
+.square.squareText{
+    text-align: center;
 }

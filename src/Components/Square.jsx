@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import '../Styles/square.css';
-const Grid = () => {
+
+const Grid = ({ text, id, handleGuess }) => {
+
+    const handleTextSubmit = () => {
+        handleGuess();
+    }
+
     return (
-        <div className="styles.square">
-            square
+        <div className="square">
+            <div className='squareText'>
+                {text}
+            </div>
         </div>
     )
 }
