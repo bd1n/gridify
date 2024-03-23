@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import '../Styles/square.css';
 
-const Grid = ({ text, id, handleGuess }) => {
+const Square = ({ show, setShow, text, id, handleGuess }) => {
+
+    const handleClick = () => {
+        setShow(!show);
+    }
 
     const handleTextSubmit = () => {
         handleGuess();
     }
 
     return (
-        <div className="square">
+        <div className="square" onClick={() => handleClick()}>
             <div className='squareText'>
                 {text}
             </div>
@@ -16,4 +20,4 @@ const Grid = ({ text, id, handleGuess }) => {
     )
 }
 
-export default Grid;
+export default Square;
