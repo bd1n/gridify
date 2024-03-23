@@ -52,3 +52,29 @@ export const getAudioFeatures_Track = async (track_id) => {
   }  
 };
 
+export const getSearch = async (artist) => {
+  //request token using getAuth() function
+  const access_token = await getAuth();
+
+  const api_url = "https://api.spotify.com/v1/search?q=remaster%2520" + encodeURIComponent("artist:"+artist) + "&type=artist";
+  // https://api.spotify.com/v1/search?q=artist%3ADrake
+  console.log(api_url);
+  try{
+    const response = await axios.get(api_url, {
+      headers: {
+        'Authorization': `Bearer ${access_token}`
+      }
+    });
+    
+    console.log(response.data.artists.items[0]);
+
+    if(!response.data.artists.items[0] || response.data.artists.items[0].name != artist) {
+      console.log("no artist");
+      return;
+    }
+    
+    return response.data;
+  }catch(error){
+    console.log(error);
+  }  
+};

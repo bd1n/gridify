@@ -9,12 +9,23 @@ function App() {
   const [token, setToken] = useState(null);
   const [search, setSearch] = useState(null);
   useEffect( () => {
-    auth.getAuth().then((response) => {
+    auth.getAuth()
+    .then((response) => {
       setToken(response);
     });
-    auth.getAudioFeatures_Track('07A0whlnYwfWfLQy4qh3Tq')
+    // auth.getAudioFeatures_Track('07A0whlnYwfWfLQy4qh3Tq')
+    // .then((search) => {
+    //   // setSearch(search);
+    // });
+    auth.getSearch("Drumpledorf")
     .then((search) => {
-      // setSearch(search);
+      console.log(search)
+      if (!search) {
+        // THIS IS AN ERROR
+      }
+      else{
+        // FILL SQUARE
+      }
     });
   }, []);
 
