@@ -51,12 +51,12 @@ export function setEnum() {
     const is_group = Math.random() > 0.5;
 
     categories = Object.freeze({
-        Genre: genre_type, 
-        Follower: follower_num,
-        Name: name_char,
-        Debut: debut_decade,
-        Release: released_year,
-        Is_Group: is_group
+        Genre: genre_type, //1
+        Follower: follower_num, //2
+        Name: name_char, //3
+        Debut: debut_decade, //4
+        Release: released_year, //5
+        Is_Group: is_group //6
     });
 }
 
@@ -64,12 +64,12 @@ export function setOrder() {
     const answer_arr = [1, 2, 3, 4, 5, 6];
     // console.log(answer_arr);
     order = Object.freeze({
-        X1: answer_arr[0],
-        X2: answer_arr[1],
-        X3: answer_arr[2],
-        Y1: answer_arr[3],
-        Y2: answer_arr[4],
-        Y3: answer_arr[5]
+        X1: answer_arr[0], //genre
+        X2: answer_arr[1], //follower
+        X3: answer_arr[2], //name
+        Y1: answer_arr[3], //debut
+        Y2: answer_arr[4], //release
+        Y3: answer_arr[5] //is_group
     });
 }
 

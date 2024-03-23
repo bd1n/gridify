@@ -75,13 +75,39 @@ export const getSearch = async (artist, first_param, second_param) => {
     else {
       const artist_id = response.data.artists.items[0].id; 
       artist = await getArtist(artist_id);
-      console.log("got artist:", artist)
+      console.log("got artist:", artist);
+      const x_valid = testValidity(artist, first_param);
+      const y_valid = testValidity(artist, second_param);
+
       return artist_id;
     }
   }catch(error){
     console.log(error);
   }  
 };
+
+const testValidity = (artist, param) => {
+  switch(param) {
+    case 1: //genre
+      break;
+
+    case 2: //follower
+      break;
+
+    case 3: //name
+      break;
+
+    case 4: //debut
+      break;
+
+    case 5: //release
+      break;
+
+    case 6: //is_Group
+      break;
+  }
+  return true;
+}
 
 export const getArtist = async (artist_id) => {
   //request token using getAuth() function
