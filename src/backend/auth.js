@@ -66,13 +66,35 @@ export const getSearch = async (artist) => {
       }
     });
     
-    console.log(response.data.artists.items[0]);
+    console.log("auth side", response.data.artists.items[0].name);
 
     if(!response.data.artists.items[0] || response.data.artists.items[0].name != artist) {
-      console.log("no artist");
+      console.log("auth side no artist");
       return;
     }
-    
+    else {
+      const artist_id = response.data.artists.items[0].id; 
+      return artist_id;
+    }
+  }catch(error){
+    console.log(error);
+  }  
+};
+
+export const getArtist = async (artist_id) => {
+  //request token using getAuth() function
+  const access_token = await getAuth();
+  //console.log(access_token);
+
+  const api_url = `https://api.spotify.com/v1/artists/${artist_id}`;
+  //console.log(api_url);
+  try{
+    const response = await axios.get(api_url, {
+      headers: {
+        'Authorization': `Bearer ${access_token}`
+      }
+    });
+    console.log(response.data);
     return response.data;
   }catch(error){
     console.log(error);

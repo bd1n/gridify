@@ -17,14 +17,15 @@ function App() {
     // .then((search) => {
     //   // setSearch(search);
     // });
-    auth.getSearch("Drumpledorf")
+    auth.getSearch("Drake")
     .then((search) => {
-      console.log(search)
       if (!search) {
         // THIS IS AN ERROR
+        console.log("APP SIDE no artist")
       }
       else{
         // FILL SQUARE
+        console.log("APP SIDE", search)
       }
     });
   }, []);
