@@ -1,0 +1,6 @@
+https://gist.github.com/donstefani/70ef1069d4eab7f2339359526563aab2
+https://ritvikbiswas.medium.com/connecting-to-the-spotify-api-using-node-js-and-axios-client-credentials-flow-c769e2bee818
+https://www.freecodecamp.org/news/how-to-use-axios-with-react/
+https://dmitripavlutin.com/javascript-enum/#1-enum-based-on-a-plain-object
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+https://stackoverflow.com/questions/36756331/js-generate-random-boolean
