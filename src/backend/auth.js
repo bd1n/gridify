@@ -1,5 +1,6 @@
 import axios from 'axios';
 import qs from 'qs';
+import { getEnum } from '../CategoryEnum';
 
 const clientId = "41c7294e188e4d36a29ba3291c01070e";
 const clientSecret = "41dcb52e26d9484e8a97bed58ed5d806";
@@ -52,7 +53,7 @@ export const getAudioFeatures_Track = async (track_id) => {
   }  
 };
 
-export const getSearch = async (artist, first_param, second_param) => {
+export const getSearch = async (artist, first_cat, second_cat) => {
   //request token using getAuth() function
   const access_token = await getAuth();
 
@@ -76,19 +77,24 @@ export const getSearch = async (artist, first_param, second_param) => {
       const artist_id = response.data.artists.items[0].id; 
       artist = await getArtist(artist_id);
       console.log("got artist:", artist);
-      const x_valid = testValidity(artist, first_param);
-      const y_valid = testValidity(artist, second_param);
+      const x_valid = isValidAnswer(artist, first_cat);
+      const y_valid = isValidAnswer(artist, second_cat);
 
-      return artist_id;
+      return x_valid && y_valid;
     }
   }catch(error){
     console.log(error);
   }  
 };
 
-const testValidity = (artist, param) => {
-  switch(param) {
+const isValidAnswer = (artist, category) => {
+  const param = getEnum()[category];
+
+  switch(category) {
     case 1: //genre
+      if (artist.genres.includes(param)) {
+        return true;
+      }
       break;
 
     case 2: //follower
@@ -105,8 +111,10 @@ const testValidity = (artist, param) => {
 
     case 6: //is_Group
       break;
+    default:
+      return false;
   }
-  return true;
+  return false;
 }
 
 export const getArtist = async (artist_id) => {
