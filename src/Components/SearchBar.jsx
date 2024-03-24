@@ -11,8 +11,8 @@ const SearchBar = () => {
     const handleSubmit = (text) => {
         setSearchText(text);
         count++;
-        if(count == 9){
-            
+        if(count === 9){
+
         }
     }
 
