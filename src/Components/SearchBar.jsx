@@ -2,13 +2,12 @@ import React from "react";
 import { TextField } from "@mui/material";
 import "../Styles/searchbar.css"
 
-const SearchBar = ({show}) => {
+const SearchBar = ({show, rowCatClicked, colCatClicked }) => {
 
     return(
         <div className="search-bar"> 
             {show ? <TextField id="outlined-basic" label="Search for an artist" variant="outlined">
-            </TextField> : <div>hidden</div>}
-            {show}
+            </TextField> : null}
         </div>
     )
 }

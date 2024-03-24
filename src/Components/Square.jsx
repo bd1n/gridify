@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import '../Styles/square.css';
 
-const Square = ({ show, setShow, text, id, handleGuess }) => {
+const Square = ({ show, setShow, text, id, handleGuess, rowCatIndex, setRowCatClicked, colCatIndex, setColCatClicked }) => {
 
     const handleClick = () => {
         setShow(!show);
+        setRowCatClicked(rowCatIndex);
+        setColCatClicked(colCatIndex);
     }
 
     const handleTextSubmit = () => {
@@ -14,7 +16,7 @@ const Square = ({ show, setShow, text, id, handleGuess }) => {
     return (
         <div className="square" onClick={() => handleClick()}>
             <div className='squareText'>
-                {text}
+                {"col = " + colCatIndex + " row =  " + rowCatIndex}
             </div>
         </div>
     )
