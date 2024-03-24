@@ -77,12 +77,12 @@ export function setOrder() {
     });
 }
 
-export function getRowOrder() {
-    return row_order;
+export function getRowCategory(index) {
+    return row_order[index];
 }
 
-export function getColOrder() {
-    return col_order;
+export function getColCategory(index) {
+    return col_order[index];
 }
 
 
