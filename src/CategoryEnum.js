@@ -21,7 +21,7 @@ function getDecade() {
 }
 
 function getGenre() {
-    const genre = ["rock", "rap", "pop", "classical", "country", "edm", "jazz", "kpop"];
+    const genre = ["rock", "rap", "pop", "classical", "country", "edm", "jazz", "k-pop"];
     let result = genre[Math.floor(Math.random() * genre.length)];
     return result;
 }
@@ -44,10 +44,12 @@ function getGenre() {
 // }
 
 export function setEnum() {
-    const genre_type = getGenre();
+    // const genre_type = getGenre();
+    const genre_type = "k-pop";
     const follower_num = getRandomInt(1, 100) * 1000000;
     const name_char = getRandomChar();
-    const debut_decade = getDecade();
+    // const debut_decade = getDecade();
+    const debut_decade = 2020;
     const released_year = getRandomInt(2019, 2024);
     const words = getRandomInt(1, 3);
     // const is_group = Math.random() > 0.5;

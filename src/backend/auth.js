@@ -62,7 +62,7 @@ export const getSearch = async (artist, row_index, col_index) => {
       const row_category = getRowCategory(row_index);
       const col_category = getColCategory(col_index);
 
-      console.log("row and col is", row_category, row_index, col_category, col_index);
+      console.log("row cat is", row_category, "row index is", row_index, "col cat is", col_category, "col index is", col_index);
 
       const x_valid = await isValidAnswer(artist, row_category);
       console.log("x_valid is", x_valid);
@@ -72,7 +72,8 @@ export const getSearch = async (artist, row_index, col_index) => {
       return x_valid&&y_valid?artist.images[0].url:null;
     }
   }catch(error){
-    console.log(error);
+    // console.log(error);
+    return false;
   }  
 };
 
@@ -83,7 +84,6 @@ async function isValidAnswer (artist, category) {
   switch(category) {
     case 1: //genre
       console.log("in genre", artist.genres, param, category);
-      let genre_valid = false;
       for (let i = 0; i<artist.genres.length; i++) {
         if (artist.genres[i].includes(param.toLowerCase())) {
           return true;
