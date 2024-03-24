@@ -4,7 +4,7 @@ import "../Styles/searchbar.css"
 import { Button } from "@mui/base";
 import { getSearch } from "../backend/auth";
 
-const SearchBar = ({show, rowCatClicked, colCatClicked, clickedBoxId, setClickedBoxId, gridData, setGridData, setImage}) => {
+const SearchBar = ({show, colCatClicked, rowCatClicked, clickedBoxId, changedSquare, setChangedSquare}) => {
     const [searchInput, setSearchInput] = useState("");
     const [wrongInput, setWrongInput] = useState(false);
 
@@ -21,12 +21,18 @@ const SearchBar = ({show, rowCatClicked, colCatClicked, clickedBoxId, setClicked
 
         if (result){
             console.log("GOOD GUESS, picture is", result)
-            const squares = gridData.map(box =>
-                console.log("found", box.props, clickedBoxId)
-                // box.props.id === clickedBoxId? {...box, image : result}: box
-            );
-            setGridData(squares);
-            (console.log("searchbar squares is ", gridData));
+            // const squares = gridData.map(box =>
+            //     console.log("found", box.props, clickedBoxId)
+            //     // box.props.id === clickedBoxId? {...box, image : result}: box
+            // );
+            // setGridData(squares);
+            // setImage(result);
+            // (console.log("searchbar squares is ", gridData));
+            setChangedSquare({
+                id: clickedBoxId,
+                image: result,
+                changed: true
+            });
         }
         else if (result === false && result !== null) {
             console.log("WRONG bozo");

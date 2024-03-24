@@ -92,5 +92,5 @@ export function getColCategory(index) {
 
 
 export function getEnum() {
-    return categories;
+    return categories?categories:null;
 }
