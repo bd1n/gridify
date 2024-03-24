@@ -1,8 +1,9 @@
 import Square from './Square.jsx';
+import { React, useState } from 'react';
 import '../Styles/board.css'
 
-const Board = ({show, setShow, setRowCatClicked, setColCatClicked}) => {
-
+const Board = ({show, setShow, setRowCatClicked, setColCatClicked }) => {
+    const [rowCategories, setRowCategories] = useState([]);
     const handleTextSubmit = () => {
         return ""
     }
@@ -30,11 +31,18 @@ const Board = ({show, setShow, setRowCatClicked, setColCatClicked}) => {
         }
     }
     return(
-        <div className='board'>
-            <div className="grid-container">
-                {squares.map(square => {
-                    return(square)
+        <div className='board_row_parent'>
+            <div className="row-categories">
+                {rowCategories.map(category => {
+                    return <div key={category}>{category}</div>
                 })}
+            </div>
+            <div className='board'>
+                <div className="grid-container">
+                    {squares.map(square => {
+                        return(square)
+                    })}
+                </div>
             </div>
         </div>
     )

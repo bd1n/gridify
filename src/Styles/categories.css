@@ -1,0 +1,27 @@
+.col-categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    padding-right: 250px;
+    width: fit-content;
+}
+
+.columns{
+    width: fit-content;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.row-categories{
+    float: left;
+    margin-top: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rows{
+    text-align: center;
+    height: max-content;
+}

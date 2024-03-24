@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #7cc7ab;
+  height: 100vh;
 }
 
 .testDiv{

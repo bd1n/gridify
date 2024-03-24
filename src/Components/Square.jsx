@@ -4,7 +4,9 @@ import '../Styles/square.css';
 const Square = ({ show, setShow, text, id, handleGuess, rowCatIndex, setRowCatClicked, colCatIndex, setColCatClicked, image }) => {
 
     const handleClick = () => {
-        setShow(!show);
+        if(!show){
+            setShow(!show);
+        }
         setRowCatClicked(rowCatIndex);
         setColCatClicked(colCatIndex);
     }
