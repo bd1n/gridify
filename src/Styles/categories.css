@@ -4,24 +4,28 @@
     align-items: center;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 0 auto;
-    padding-right: 250px;
+    padding-right: 50px;
     width: fit-content;
 }
 
 .columns{
     width: fit-content;
+    padding-right: 500px;
     margin: 0 auto;
-    height: max-content;
+    margin-left: 30px;
+    height: fit-content;
 }
 
 .row-categories{
+    padding-top: 15px;
+    padding-bottom: 15px;
     float: left;
-    margin-top: 350px;
+    margin-top: 270px;
     justify-content: center;
     align-items: center;
 }
 
 .rows{
     text-align: center;
-    height: max-content;
+    height: 6vh;
 }

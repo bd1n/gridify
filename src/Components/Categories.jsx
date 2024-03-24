@@ -50,7 +50,7 @@ const Categories = () => {
             <div className="col-categories">
                 <div className="columns">
                     {colCategories.map(category => {
-                        return <div style={{maxWidth: '30px', height: '40px', display: 'inline-block', padding: '15px', paddingLeft: '8vh', paddingRight: '8vh'}} key={category}>{category}</div>
+                        return <div style={{maxWidth: '30px', height: '40px', display: 'inline-block', padding: '35px'}} key={category}>{category}</div>
                     })}
                 </div>
             </div>

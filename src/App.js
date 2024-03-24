@@ -16,8 +16,11 @@ function App() {
     <div className="App">
       <Header/>
       <SearchBar className='search-bar' show={show} rowCatClicked={rowCatClicked} colCatClicked={colCatClicked}/>
-      <Categories/>
-      <Board show={show} setShow={setShow} rowCatClicked={rowCatClicked} setRowCatClicked={setRowCatClicked} colCatClicked={colCatClicked} setColCatClicked={setColCatClicked}/>
+      <div style={{paddingLeft: '300px', paddingBottom: '30px', backgroundColor: "#7cc7ab"}}>
+  
+        <Categories/>
+        <Board show={show} setShow={setShow} rowCatClicked={rowCatClicked} setRowCatClicked={setRowCatClicked} colCatClicked={colCatClicked} setColCatClicked={setColCatClicked}/>
+      </div>
       <Footer/>
     </div>
   );

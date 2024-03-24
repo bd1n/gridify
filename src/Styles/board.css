@@ -2,13 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2px;
-    width: "100%";
-    margin: 0 auto;
+    margin-right: auto;
     margin-top: 0px;
+
   }
 
 .board_row_parent{
+  margin-bottom: 20px;
   display: flex;
+  width: fit-content;
   justify-content: center;
   padding-right: 250px;
 }

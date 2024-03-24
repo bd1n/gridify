@@ -1,6 +1,7 @@
 import Square from './Square.jsx';
 import { React, useState } from 'react';
-import '../Styles/board.css'
+import '../Styles/board.css';
+import '../Styles/categories.css';
 
 const Board = ({show, setShow, setRowCatClicked, setColCatClicked }) => {
     const [rowCategories, setRowCategories] = useState([]);
@@ -34,7 +35,7 @@ const Board = ({show, setShow, setRowCatClicked, setColCatClicked }) => {
         <div className='board_row_parent'>
             <div className="row-categories">
                 {rowCategories.map(category => {
-                    return <div key={category}>{category}</div>
+                    return <div style={{padding: '15px'}} key={category}>{category}</div>
                 })}
             </div>
             <div className='board'>
