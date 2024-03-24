@@ -7,6 +7,11 @@ import "../Styles/searchbar.css"
 
 const SearchBar = () => {
     const [searchText, setSearchText] = useState('');
+    var count = 0;
+    const handleSubmit = (text) => {
+        setSearchText(text);
+        count++;
+    }
 
     return(
         <div className="search-bar"> 
