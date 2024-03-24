@@ -12,7 +12,7 @@ const SearchBar = () => {
         setSearchText(text);
         count++;
         if(count === 9){
-            
+
         }
     }
 
