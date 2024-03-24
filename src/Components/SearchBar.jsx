@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import "../Styles/searchbar.css"
 
-<<<<<<< HEAD
 
 const SearchBar = () => {
     const [searchText, setSearchText] = useState('');
@@ -12,6 +11,9 @@ const SearchBar = () => {
     const handleSubmit = (text) => {
         setSearchText(text);
         count++;
+        if(count === 9){
+            
+        }
     }
 
     return(
@@ -21,14 +23,6 @@ const SearchBar = () => {
             <div>
                 Res = {searchText}
             </div>
-=======
-const SearchBar = ({show, rowCatClicked, colCatClicked }) => {
-
-    return(
-        <div className="search-bar"> 
-            {show ? <TextField id="outlined-basic" label="Search for an artist" variant="outlined">
-            </TextField> : null}
->>>>>>> main
         </div>
     )
 }
