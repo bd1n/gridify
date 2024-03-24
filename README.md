@@ -1,4 +1,5 @@
-### TO PLAY
+
+# TO PLAY
 
 Simply click on a grid square to make a guess! Correct answers are artists who match the criteria on the corresponding row & column.
 
