@@ -15,3 +15,8 @@ https://forum.freecodecamp.org/t/mapping-in-react-component-using-state-issue/56
 https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
 
 Anubhav:
+https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website
+https://www.geeksforgeeks.org/how-to-use-textfield-component-in-material-ui/
+https://mui.com/material-ui/react-text-field/
+https://mui.com/material-ui/react-bottom-navigation/
+https://stackoverflow.com/questions/29791721/how-get-data-from-material-ui-textfield-dropdownmenu-components
