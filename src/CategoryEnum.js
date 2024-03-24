@@ -77,9 +77,14 @@ export function setOrder() {
     });
 }
 
-export function getOrder() {
-    return order;
+export function getRowOrder() {
+    return row_order;
 }
+
+export function getColOrder() {
+    return col_order;
+}
+
 
 export function getEnum() {
     return categories;
