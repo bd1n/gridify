@@ -1,3 +1,7 @@
+### TO PLAY
+
+Simply click on a grid square to make a guess! Correct answers are artists who match the criteria on the corresponding row & column.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
