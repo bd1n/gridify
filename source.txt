@@ -1,6 +1,17 @@
+Devang:
 https://gist.github.com/donstefani/70ef1069d4eab7f2339359526563aab2
 https://ritvikbiswas.medium.com/connecting-to-the-spotify-api-using-node-js-and-axios-client-credentials-flow-c769e2bee818
 https://www.freecodecamp.org/news/how-to-use-axios-with-react/
 https://dmitripavlutin.com/javascript-enum/#1-enum-based-on-a-plain-object
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 https://stackoverflow.com/questions/36756331/js-generate-random-boolean
+
+Brennan:
+https://reactnative.dev/docs/image
+https://stackoverflow.com/questions/5601931/how-do-i-safely-merge-a-git-branch-into-master
+https://stackoverflow.com/questions/4938716/align-div-elements-side-by-side
+https://devtrium.com/posts/async-functions-useeffect
+https://forum.freecodecamp.org/t/mapping-in-react-component-using-state-issue/567183
+https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
+
+Anubhav:
