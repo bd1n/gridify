@@ -49,7 +49,8 @@ export function setEnum() {
     const name_char = getRandomChar();
     const debut_decade = getDecade();
     const released_year = getRandomInt(2019, 2024);
-    const is_group = Math.random() > 0.5;
+    const words = getRandomInt(1, 3);
+    // const is_group = Math.random() > 0.5;
 
     categories = Object.freeze({
         1: genre_type, //1 genre
@@ -57,7 +58,8 @@ export function setEnum() {
         3: name_char, //3 name
         4: debut_decade, //4 debut
         5: released_year, //5 release
-        6: is_group //6 is_group
+        6: words
+        // 6: is_group //6 is_group
     });
 }
 
@@ -73,7 +75,8 @@ export function setOrder() {
     col_order = Object.freeze({
         0: answer_arr[3], //debut
         1: answer_arr[4], //release
-        2: answer_arr[5] //is_group
+        2: answer_arr[5] //name
+        // 2: answer_arr[5] //is_group
     });
 }
 
