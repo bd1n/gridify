@@ -1,0 +1,11 @@
+.category-square{
+    width: 18vh;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-square.cat-text{
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { getColCategory, getRowCategory, setEnum, setOrder, getEnum } from "../CategoryEnum.js";
 import "../Styles/categories.css";
-const Categories = () => {
+const Categories = ({ columnCategories, setColumnCategories } ) => {
     const [loading, setLoading] = useState(true);
     const [colCategories, setColCategories] = useState([]);
     const [rowCategories, setRowCategories] = useState([]);
@@ -34,12 +34,11 @@ const Categories = () => {
                         break;
                 }
             }
+            setColumnCategories(colCategories);
             setLoading(false);
         }
         fetchEnum();
     }, []);
-
-
     return(
         <div>
             <div className="row-categories">
@@ -54,7 +53,6 @@ const Categories = () => {
                     })}
                 </div>
             </div>
-
         </div>
     )
 }
