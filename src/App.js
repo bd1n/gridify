@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <Header/>
       <SearchBar className='search-bar' show={show} rowCatClicked={rowCatClicked} colCatClicked={colCatClicked}/>
-        <div style={{paddingLeft: '300px', paddingBottom: '30px', backgroundColor: "#7cc7ab", display: "flex", flexDirection: 'row'}}>
+        <div style={{paddingLeft: '400px', paddingBottom: '30px', backgroundColor: "#7cc7ab", display: "flex", flexDirection: 'row'}}>
             <ColumnCategories categories={colCategories}/>
           <div>
           <RowCategories categories={rowCategories}/>
